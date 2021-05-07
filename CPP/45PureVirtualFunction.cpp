@@ -2,12 +2,15 @@
 using namespace std;
 class Base{
     public:
-    int a,b,sum;
   virtual  void PureVirtual()=0;
 };
 
-
-class Derived:public Base{
+class derived1 :public Base{
+    public:
+    int a,b,sum;
+    void virtual PureVirtual()=0;
+};
+class Derived:public derived1{
     public:
     void PureVirtual(){//overriding function
     //if we don't override this function Derived class remains abstract
